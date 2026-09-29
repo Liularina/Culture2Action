@@ -1,0 +1,22 @@
+{
+  "name": "culture2action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "文化落地引擎 Culture2Action - 文化价值观落地与培训课件生成平台",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"npm run dev:server\" \"npm run dev:web\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "start": "npm --workspace server run start",
+    "seed": "npm --workspace server run seed",
+    "build": "npm --workspace web run build",
+    "preview": "npm --workspace web run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

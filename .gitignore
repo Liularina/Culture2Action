@@ -174,3 +174,7 @@
 *.lz
 *.lzma
 *.iso
+
+# Database
+server/data/
+.env
